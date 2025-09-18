@@ -8,9 +8,24 @@ console.log(enlaces)
 console.log(enlaces[0])
 enlaces[0].textContent = "Nuevo texto para enlace"
 enlaces[0].classList.add("nueva-clase") 
-enlaces[0].classList.remove("navegacion__enlace") 
+//enlaces[0].classList.remove("navegacion__enlace") 
 
 //getElementById
 const heading2 = document.getElementById("heading")
 console.log(heading2)
+
+// Genera enlace
+
+const nuevoEnlace = document.createElement('A')
+//agregar href
+nuevoEnlace.href = 'nuevo-enlace.html'
+//agregar texto
+nuevoEnlace.textContent = 'Tienda Virtual'
+//agregar clase
+nuevoEnlace.classList.add('navegacion__enlace')
+// agregar al documento
+const navegacion = document.querySelector('.navegacion')
+navegacion.appendChild(nuevoEnlace)
+
+console.log(nuevoEnlace)
 
