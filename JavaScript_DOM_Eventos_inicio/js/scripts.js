@@ -83,12 +83,14 @@ formulario.addEventListener("submit", function (evento) {
   // Validar el formulario
   const {nombre, email, mensaje} = datos;
   if (nombre === "" || email === "" || mensaje === "") {
-    mostrarError("Todos los campos son obligatorios");
+    mostrarAlerta("Todos los campos son obligatorios", true);
     return; // Corta la ejecucion del código
   }
+
+  //Crear la alerta de Enviar correctamente
   // Enviar el formulario
   // console.log("Enviando Formulario");
-  mostrarExito("Formulario enviado con éxito")
+  mostrarAlerta("Mensaje enviado con éxito")
 });
 
 function leerTexto(e) {
@@ -97,33 +99,23 @@ function leerTexto(e) {
   // console.log(datos)
 }
 
-// Muestra un error en pantalla
+function mostrarAlerta(mensaje, error = null){
+  const alerta = document.createElement('P');
+  alerta.textContent = mensaje;
 
-function mostrarError(mensaje) {
-  const error = document.createElement("P");
-  error.textContent = mensaje;
-  error.classList.add("error");
+  if(error) {
+    alerta.classList.add('error')
+  } else {
+    alerta.classList.add('exito')
+  }
 
-  formulario.appendChild(error);
+  formulario.appendChild(alerta)
 
-  // Desaparezca después de 5 segundos
-
+  // desaparezca después de 5 segundos
   setTimeout(() => {
-    error.remove();
+    alerta.remove();
   }, 5000);
+
 }
 
-// Muestra exito al enviar formulario
-function mostrarExito(mensaje) {
-  const exito = document.createElement("P");
-  exito.textContent = mensaje;
-  exito.classList.add("exito");
 
-  formulario.appendChild(exito);
-
-  // Desaparezca después de 5 segundos
-
-  setTimeout(() => {
-    exito.remove();
-  }, 5000);
-}
