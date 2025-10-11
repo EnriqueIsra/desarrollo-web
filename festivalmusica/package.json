@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/EnriqueIsra/desarrollo-web/issues"
   },
-  "homepage": "https://github.com/EnriqueIsra/desarrollo-web#readme"
+  "homepage": "https://github.com/EnriqueIsra/desarrollo-web#readme",
+  "devDependencies": {
+    "sass": "^1.93.2"
+  }
 }
