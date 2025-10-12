@@ -1,3 +1,5 @@
 body {
-  background-color: rgba(179, 225, 222, 0.931);
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
