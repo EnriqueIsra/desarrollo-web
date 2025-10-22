@@ -440,6 +440,9 @@ body > section {
   }
 }
 
+.contenido-video {
+  z-index: 10;
+}
 .contenido-video h2 {
   color: #FFFFFF;
   font-size: 7rem;
