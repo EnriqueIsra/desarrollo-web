@@ -595,7 +595,20 @@ body > section {
   animation: fadeOut ease-in 0.5s;
 }
 .modal img {
-  max-width: 100rem;
+  max-width: 80rem;
+}
+
+.btn-cerrar {
+  width: 4rem;
+  height: 4rem;
+  font-weight: 700;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  border: none;
+  color: #000000;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
 }
 
 @keyframes fadeIn {

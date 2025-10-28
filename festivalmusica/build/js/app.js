@@ -28,7 +28,14 @@ function mostrarImagen(i) {
     const modal = document.createElement('DIV')
     modal.classList.add('modal')
     modal.onclick = cerrarModal
+
+    const cerrarModalBtn = document.createElement('BUTTON')
+    cerrarModalBtn.textContent = "X"
+    cerrarModalBtn.classList.add('btn-cerrar')
+    cerrarModalBtn.onclick = cerrarModal
+
     modal.appendChild(imagen)
+    modal.appendChild(cerrarModalBtn)
 
     const body = document.querySelector('body')
     body.classList.add('overflow-hidden')
