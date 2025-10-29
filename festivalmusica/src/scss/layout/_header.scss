@@ -4,7 +4,7 @@
 .header {
     background-color: v.$verde;
 
-    @include m.tablet{
+    @include m.tablet {
         &.fixed {
             position: fixed;
             left: 0;
@@ -13,18 +13,21 @@
             box-shadow: .1rem .2rem .3rem #333;
         }
     }
-    
+
     .contenido-header {
         padding: 2rem;
+
         @include m.tablet {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
     }
+
     h1 {
         color: v.$blanco;
         text-align: center;
+
         @include m.tablet {
             margin: 0;
             text-align: left;
@@ -32,22 +35,24 @@
     }
 }
 
-.navegacion-principal{
+.navegacion-principal {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     @include m.tablet {
         flex-direction: row;
     }
+
     gap: 2rem;
+
     a {
         color: v.$blanco;
         font-size: 2.4 rem;
 
-        &:hover{
+        &:hover,
+        &.active {
             color: v.$amarillo;
         }
     }
 }
-
-
